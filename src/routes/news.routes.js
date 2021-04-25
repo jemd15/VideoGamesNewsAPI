@@ -5,6 +5,7 @@ const newsModel = require('../models/news.model');
 router.get('/', /* verifyRole.admin, */ (req, res) => {
   newsModel.getNews()
     .then(news => {
+      console.log(news);
       res.status(200).json(news);
     })
     .catch(err => {
