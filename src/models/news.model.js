@@ -19,7 +19,7 @@ newsModel.getNews = async () => {
      })
   })
 
-  return newsFiltered
+  return news
 }
 
 module.exports = newsModel;
