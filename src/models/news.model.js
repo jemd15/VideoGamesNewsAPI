@@ -14,7 +14,7 @@ newsModel.getNews = async () => {
       "uid": `NOTICIA_${i+1}`,
       "updateDate": $(el).find('time').attr('datetime'),
       "titleText": $(el).find('a.rC').attr('title'),
-      "mainText": $(el).find('a.rC').attr('title').trim() + '. ' + $(el).find('.elementIntro').text(),
+      "mainText": $(el).find('a.rC').attr('title').trim() + '. ' + $(el).find('.elementIntro').text().trim(),
       "redirectionUrl": url + $(el).find('.tc').find('a').attr('href').split('#')[0]
      })
   })
