@@ -11,7 +11,7 @@ newsModel.getNews = async () => {
   // por cada noticia obtenemos su titulo, descripción y fecha de publicación
   $('div.content').has('.elementHeader').has('p').map((i, el) => {
     news.push({
-      "uid": `NOTICIA_${i+1}`,
+      // "uid": `NOTICIA_${i+1}`,
       "updateDate": $(el).find('time').attr('datetime'),
       "titleText": $(el).find('a.rC').attr('title'),
       "mainText": $(el).find('a.rC').attr('title').trim() + '. ' + $(el).find('.elementIntro').text().trim(),
@@ -20,7 +20,7 @@ newsModel.getNews = async () => {
   })
 
   // eliminamos duplicados (si, tarreo.com devuelve noticias duplicadas a veces)
-  let newsFiltered = news.filter((item,index)=>{
+  let newsFiltered = news.filter((item, index)=>{
     return news.indexOf(item) === index;
   })
 
