@@ -21,7 +21,7 @@ newsModel.getNews = async () => {
 
   // eliminamos duplicados (si, tarreo.com devuelve noticias duplicadas a veces)
   let newsFiltered = news.filter((item,index)=>{
-    return data.indexOf(item) === index;
+    return news.indexOf(item) === index;
   })
 
   return newsFiltered
